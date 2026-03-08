@@ -1,0 +1,69 @@
+---
+layout: default
+title: Github
+---
+  <h2>Github Repositories</h2>
+  <p>
+    My repositories at github can be accessed via this <a href="https://github.com/djwebb?tab=repositories">
+    link</a>.
+  </p>
+
+<h3>glui</h3>
+  <p>
+    I used the mesa library to generate 3-D pictures for my papers on tidal resonances (Webb 2013a and
+    Webb 2014a).  Later when I started a project to study the development of the El Nino in the Pacific Ocean
+    I wanted to show the 3-D oceanic fields varying in time and also to make changes to the program variables
+    on the screen while this was happening.  For the latter problem the glui library seemed perfect but
+    I found that it produced segmentation faults.  I tracked some of these down and so became involved
+    in the glui project.  My changes are in repository glui_old.
+  </p><p>
+    More recently the original glui code has been rewritten to ensure that it is more stable.  One of my
+    earlier edits, which ordered the files and directories in the filebrowser, was never implemented in the
+    original code.  The djwebb/glui repository now includes a version which works with the latest version
+    of glui.
+</p>
+
+  <h3>hass</h3>
+  <p>
+  This repository contains programs for solving Hasslemann's equation, a non-linear equation
+  which describes the development of a sea wave spectrum due to wave-wave interactions.
+  The programs are based on the original code used for Webb (1978), where the first accurate
+  solutions of the equation were published.
+  </p>
+
+<h3>moonlight</h3>
+  <p>
+  This is the 2018 version of the Austin et al. moonlight programme:
+  </p><p>
+   Austin, R.H., Phillips, B.F. and Webb, D.J. (1976)  A method for calculation moonlight illuminance at the Earth's surface.  J. Appl. Ecol., 13(3), 741-748.
+  </p><p>
+  It is included here on GitHub because it is still occasionally used.  The original code was written for an early version of Fortran.  In version 2.0 (1999) it was updated to Fortran 90.  In version 2.1:
+  <br>
+  1.  The code has been rewritten to accept dates outside the range 1900-1999.
+  <br>
+  2.  The inputfile can be specified on the command line.  For example:
+  <br>
+       ./moonlight PhillipIsland.dat
+  <br>
+  3.  Although the code was developed for the period 1990-1999, tests in 2019 indicate that the positions of the Sun and Moon are correct to within half a degree and this will remain true until 2100.
+  </p><p>
+  The code has been tested using the GNU gfortran compiler on a linux computer but should compile successfully with other modern fortran compilers on other operating systems.
+  </p>
+
+<h3>moma</h3>
+  <p>
+  The moma ocean model is a development of the Bryan-Cox-Semtner set of ocean models.
+  It dates from the early 1990s and is single-process code designed to run efficiently on computers with
+  small cache memory and/or short vector lengths.
+  </p><p>
+  The main aim in developing moma was that it be used as the basis for a multi-processor ocean model to be run on the
+  new generation of computers.  The first multi-processor version used PVM message passing.  This was later changed to use MPI message passing (Webb 1993,1996).
+  </p><p>
+  The code was used for OCCAM global ocean model, a UK Community Project funded by the Natural Environment Research Council (NERC).  OCCAM first ran with a 1/4 degree resolution (Gwilliam et al. 1996, Webb 1999) and later with a 1/12 degree resolution.
+  </p><p>
+  The PVM and MPI versions are included in this repository as branches moma.pvm and moma.mpi.
+  </p><p>
+  The structure of the moma code is particularly simple and for that reason, in 2020, it is still sometimes used as a teaching aid for students.
+  </p>
+
+<p></br></p>
